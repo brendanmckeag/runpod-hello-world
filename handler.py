@@ -12,7 +12,7 @@ def handler(job):
     
     
     # Return a greeting message
-    return f"Hello, {name}! Welcome to RunPod Serverless! How are you doing?" 
+    return f"Hello, {name}! Welcome to Runpod Serverless! How are you doing?" 
     ####
 
 # Start the serverless function
