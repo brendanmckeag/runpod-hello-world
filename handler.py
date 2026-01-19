@@ -8,7 +8,7 @@ def handler(job):
     job_input = job["input"]
     
     # Get the name from the input, default to "World" if not provided
-    name = job_input.get("name", "World") #
+    name = job_input.get("name", "World") # #
     
     
     # Return a greeting message
