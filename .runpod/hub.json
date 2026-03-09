@@ -1,51 +1,44 @@
 {
   "title": "RunPod Hello World",
-  "description": "Responds with a Hello World regardless of input. Used to test whether handler functions and other RunPod serverless accoutrements are present and functional.",
+  "description": "Responds with a Hello World regardless of input.",
   "type": "serverless",
   "category": "language",
   "iconUrl": "https://your-icon-url.com/icon.png",
-
   "config": {
     "runsOn": "GPU",
     "containerDiskInGb": 20,
-
     "gpuCount": 1,
     "gpuIds": "RTX A4000,-NVIDIA RTX 4090",
     "allowedCudaVersions": [
       "12.8", "12.7", "12.6", "12.5", "12.4",
-      "12.3", "12.2", "12.1", "12.0"],
-      "endpointType": "LB"
-  }
-
-    "presets": [
-      {
-        "name": "Preset Name",
-        "defaults": {
-          "STRING_ENV_VAR": "value1",
-          "INT_ENV_VAR": 10,
-          "BOOL_ENV_VAR": true
-        }
-      }
+      "12.3", "12.2", "12.1", "12.0"
     ],
-
-    "env": [
-      {
-        "key": "STATIC_ENV_VAR",
-        "value": "static_value"
-      },
-      {
-        "key": "STRING_ENV_VAR",
-        "input": {
-          "name": "User-friendly Name",
-          "type": "string",
-          "description": "Description of this input",
-          "default": "default value",
-          "advanced": false
-        }
-      } 
-    ]
-  }
-}
-
-
-
+    "endpointType": "LB"
+  },                          // ← comma added
+  "presets": [
+    {
+      "name": "Preset Name",
+      "defaults": {
+        "STRING_ENV_VAR": "value1",
+        "INT_ENV_VAR": 10,
+        "BOOL_ENV_VAR": true
+      }
+    }
+  ],
+  "env": [
+    {
+      "key": "STATIC_ENV_VAR",
+      "value": "static_value"
+    },
+    {
+      "key": "STRING_ENV_VAR",
+      "input": {
+        "name": "User-friendly Name",
+        "type": "string",
+        "description": "Description of this input",
+        "default": "default value",
+        "advanced": false
+      }
+    }
+  ]
+}                        
